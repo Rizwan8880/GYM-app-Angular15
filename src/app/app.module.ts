@@ -18,7 +18,15 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import {MatChipsModule} from '@angular/material/chips';
+
 
 
 
@@ -33,9 +41,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
 
     NgToastModule,
     NgConfirmModule,
+    HttpClientModule,
 
 
     MatToolbarModule,
@@ -47,7 +58,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+   MatToolbarModule,
+   MatPaginatorModule,
+   MatSortModule,
+   MatTableModule,
+   NgConfirmModule,
+   MatCardModule,
+   MatListModule,
+   MatChipsModule
+   
+
+    
 
 
 

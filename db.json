@@ -1,0 +1,90 @@
+{
+  "enquiry": [
+    {
+      "firstName": "rizwan",
+      "lastName": "ansari",
+      "email": "ansari@gmail.com",
+      "mobail": "1234568791",
+      "weight": "58",
+      "height": "5.2",
+      "bmi": 0.18491124260355027,
+      "bmiresult": "Under weight ",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "package": "Monthly",
+      "important": [
+        "Toxic Fat reduction",
+        "Energy and endurance",
+        "Building lean Muscle",
+        "Fitness"
+      ],
+      "haveGYMBefore": "NO",
+      "enquiryDate": "2023-05-08T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "firstName": "sufi",
+      "lastName": "sarkar",
+      "email": "sufi@123gmail.com",
+      "mobail": "9158569466",
+      "weight": "60",
+      "height": "5.6",
+      "bmi": 0.1594387755102041,
+      "bmiresult": "Under weight ",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "package": "Monthly",
+      "important": [
+        "Energy and endurance",
+        "Building lean Muscle",
+        "Fitness"
+      ],
+      "haveGYMBefore": "NO",
+      "enquiryDate": "2023-05-09T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "firstName": "saud",
+      "lastName": "mirza",
+      "email": "mirza@gmail.com",
+      "mobail": "1234567895",
+      "weight": "68",
+      "height": "5.5",
+      "bmi": 0.1652892561983471,
+      "bmiresult": "Under weight ",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "package": "Year",
+      "important": [
+        "Energy and endurance",
+        "Building lean Muscle",
+        "Fitness"
+      ],
+      "haveGYMBefore": "Yes",
+      "enquiryDate": "2023-05-10T18:30:00.000Z",
+      "id": 5
+    },
+    {
+      "firstName": "Shoaib",
+      "lastName": "sheikh",
+      "email": "shoaib",
+      "mobail": "9185642565",
+      "weight": "63",
+      "height": "5.4",
+      "bmi": 0.17146776406035663,
+      "bmiresult": "Under weight ",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "package": "Quarterly",
+      "important": [
+        "Toxic Fat reduction",
+        "Energy and endurance",
+        "Building lean Muscle",
+        "Fitness"
+      ],
+      "haveGYMBefore": "NO",
+      "enquiryDate": "2023-05-09T18:30:00.000Z",
+      "id": 6
+    }
+  ]
+}

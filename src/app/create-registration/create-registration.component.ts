@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ApiService } from '../service/api.service';
+import { NgToastService } from 'ng-angular-popup';
+import { ActivatedRoute, Router } from '@angular/router';
+import { user } from '../model/user.model';
 
 @Component({
   selector: 'app-create-registration',
@@ -15,7 +19,16 @@ export class CreateRegistrationComponent implements OnInit {
     "Fitness",
   ]
   public regeisterForm!: FormGroup
-  constructor(private fb: FormBuilder) {
+  public userIdUpdate! :number
+  public isUpdateActive:boolean =false;
+
+
+  constructor(private fb: FormBuilder,
+    private api:ApiService,
+    private activatedRoute:ActivatedRoute,
+    private toastService:NgToastService,
+    private router:Router
+    ) {
 
   }
   ngOnInit(): void {
@@ -39,10 +52,30 @@ export class CreateRegistrationComponent implements OnInit {
     this.regeisterForm.controls['height'].valueChanges.subscribe(res=>{
       this.claculateBmi(res)
     })
-  }
+    this.activatedRoute.params.subscribe(val=>{
+this.userIdUpdate =val['id'];
+this.api.getRegisteredUserId(this.userIdUpdate).subscribe(res=>{
+  this.isUpdateActive =true;
+  this.filFormToUpdate(res)
+})
+    })
+    }
   submit() {
-    console.log(this.regeisterForm.value, "form vlzue");
+   this.api.postRegisteredUser(this.regeisterForm.value).subscribe(res=>{
+   this.toastService.success({detail:'Success',summary:'user addes',duration:3000});
+   this.regeisterForm.reset();
 
+   })
+
+  }
+  update(){
+    this.api.updateRegisteredUser(this.regeisterForm.value, this.userIdUpdate).subscribe(res=>{
+      this.toastService.success({detail:'Success',summary:'User Update',duration:3000});
+      this.regeisterForm.reset();
+      this.router.navigate(['list'])
+   
+      })
+     
   }
 
   claculateBmi(heightValue: number): void {
@@ -68,4 +101,25 @@ export class CreateRegistrationComponent implements OnInit {
     }
 
   }
+  filFormToUpdate(user:user){
+this.regeisterForm.setValue({
+  firstName:user.firstName,
+ 
+      lastName: user.lastName,
+      email: user.email,
+      mobail: user.mobail,
+      weight: user.weight,
+      height: user.height,
+      bmi: user.bmi,
+      bmiresult: user.bmiresult,
+      gender: user.gender,
+      requireTrainer: user.requireTrainer,
+      package: user.package,
+      important: user.important,
+      haveGYMBefore: user.haveGYMBefore,
+      enquiryDate: user.enquiryDate
+
+})
+  }
+
 }
