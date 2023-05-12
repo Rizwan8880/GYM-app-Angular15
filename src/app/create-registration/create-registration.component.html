@@ -121,13 +121,14 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Enquiry date</mat-label>
                     <input formControlName="enquiryDate" matInput [matDatepicker]="picker">
-                    <mat-hint>MM/DD/YYYY |DATE</mat-hint>
+                    <mat-hint>MM/DD/YYYY</mat-hint>
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
 
             </div>
         </div>
-        <button (click)="submit()" class="mt-4" mat-raised-button color="accent">Submit</button>
+        <button *ngIf="!isUpdateActive" (click)="submit()" class="mt-4" mat-raised-button color="accent">Submit</button>
+        <button  *ngIf="isUpdateActive"  (click)="update()" class="mt-4" mat-raised-button color="accent">Update</button>
     </form>
 </div>
