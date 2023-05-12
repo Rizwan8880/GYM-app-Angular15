@@ -85,6 +85,28 @@
       "haveGYMBefore": "NO",
       "enquiryDate": "2023-05-09T18:30:00.000Z",
       "id": 6
+    },
+    {
+      "firstName": "maruf",
+      "lastName": "ansari",
+      "email": "maruf@gmail.com",
+      "mobail": "9876543",
+      "weight": "57",
+      "height": "5.10",
+      "bmi": 0.19607843137254902,
+      "bmiresult": "Under weight ",
+      "gender": "Male",
+      "requireTrainer": "No",
+      "package": "Year",
+      "important": [
+        "Toxic Fat reduction",
+        "Energy and endurance",
+        "Building lean Muscle",
+        "Fitness"
+      ],
+      "haveGYMBefore": "NO",
+      "enquiryDate": "2023-05-11T18:30:00.000Z",
+      "id": 7
     }
   ]
 }
