@@ -7,6 +7,7 @@ import { user } from '../model/user.model';
 })
 export class ApiService {
 public baseURL :string ='http://localhost:3000/enquiry'
+// public baseURL :string ='http://localhost:7000/user/adduser'
   constructor(private http :HttpClient) { }
 
   postRegisteredUser(registrOBJ:user){
@@ -26,7 +27,7 @@ public baseURL :string ='http://localhost:3000/enquiry'
   }
 
   getRegisteredUserId(id:number){
-    return this.http.get<user>(`${this.baseURL}/${id}`)
+    return this.http.get<user>(`${this.baseURL}/${id}`) 
 
   }
 }

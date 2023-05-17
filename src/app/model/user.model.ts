@@ -2,7 +2,7 @@ export class user{
     firstName!: string;
       lastName!: string;
       email!:string;
-      mobail!: string;
+      mobile!: string;
       weight!: string;
       height!: string;
       bmi!: string;

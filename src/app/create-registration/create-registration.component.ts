@@ -36,7 +36,7 @@ export class CreateRegistrationComponent implements OnInit {
       firstName: [''],
       lastName: [''],
       email: [''],
-      mobail: [''],
+      mobile: [''],
       weight: [''],
       height: [''],
       bmi: [''],
@@ -107,7 +107,7 @@ this.regeisterForm.setValue({
  
       lastName: user.lastName,
       email: user.email,
-      mobail: user.mobail,
+      mobail: user.mobile,
       weight: user.weight,
       height: user.height,
       bmi: user.bmi,

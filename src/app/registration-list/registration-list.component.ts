@@ -22,7 +22,7 @@ public users!:user[];
 displayedColumns :string []=['id',"firstName",
 "lastName",
 "email",
-"mobail",
+"mobile",
 "bmiresult",
 "gender",
 "package",
